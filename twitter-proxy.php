@@ -9,20 +9,20 @@ function getConnectionWithAccessToken($cons_key, $cons_secret, $oauth_token, $oa
   return $connection;
 }
 
-$API_BASE_URL = "https://api.twitter.com/1.1";
+const API_BASE_URL = "https://api.twitter.com/1.1";
 $connection = getConnectionWithAccessToken($consumerkey, $consumersecret, $accesstoken, $accesstokensecret);
 
 function getTimeline($options) {
 	global $connection;
 	$args = http_build_query($options);
-	$response = $connection->get("statuses/user_timeline.json?" . $args);
+	$response = $connection->get(API_BASE_URL . "/statuses/user_timeline.json?" . $args);
 	echo json_encode($response);
 }
 
 function search($options) {
 	global $connection;
 	$args = http_build_query($options);
-	$response = $connection->get("search/tweets.json?" . $args);
+	$response = $connection->get(API_BASE_URL . "/search/tweets.json?" . $args);
 	echo json_encode($response);
 }
 
