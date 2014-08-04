@@ -11,9 +11,11 @@ A simple API for interacting with the Twitter API.  The goal is to teach the fun
 
 ## Interface
 
-Call the desired method using the query parameter **op**, as in **?op=search&username=screen_name&count=10**
+Call the desired method using the query parameter **op**, as in:
 
-All other query arguments will be passed into the method
+	?op=search&username=screen_name&count=10
+
+All other query arguments will be passed through to the Twitter API.
 
 ## Methods
 
@@ -25,7 +27,7 @@ Expected $options arguments:
 * count
 * result_type
 
-#### getTimeline($options)
+#### user_timeline($options)
 
 Expected $options arguments:
 

@@ -12,7 +12,7 @@ function getConnectionWithAccessToken($cons_key, $cons_secret, $oauth_token, $oa
 const API_BASE_URL = "https://api.twitter.com/1.1";
 $connection = getConnectionWithAccessToken($consumerkey, $consumersecret, $accesstoken, $accesstokensecret);
 
-function getTimeline($options) {
+function user_timeline($options) {
 	global $connection;
 	$args = http_build_query($options);
 	$response = $connection->get(API_BASE_URL . "/statuses/user_timeline.json?" . $args);
