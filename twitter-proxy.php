@@ -19,10 +19,17 @@ function user_timeline($options) {
 	echo json_encode($response);
 }
 
-function search($options) {
+function search_tweets($options) {
 	global $connection;
 	$args = http_build_query($options);
 	$response = $connection->get(API_BASE_URL . "/search/tweets.json?" . $args);
+	echo json_encode($response);
+}
+
+function user_search($options) {
+	global $connection;
+	$args = http_build_query($options);
+	$response = $connection->get(API_BASE_URL . "/users/search.json?" . $args);
 	echo json_encode($response);
 }
 
