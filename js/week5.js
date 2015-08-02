@@ -1,10 +1,11 @@
-if (!window.console) window.console = {};
-if (!window.console.log) window.console.log = function() {};
 
-var MyTwitterApi = (function(options) {
-	var shared = {},
-		options = options || {},
-		API_BASE = window.location.href.replace(/\/[^\/]+.html\??(.*)/, '/')
+var TwitterApi = (function(options) {
+	var shared = {};
+	var options = options || {};
+
+	function setupListeners() {
+		console.log('setupListeners()');
+	}
 
 	var init = function() {
 		console.log('init()');
@@ -14,4 +15,4 @@ var MyTwitterApi = (function(options) {
 	return shared;
 }());
 
-MyTwitterApi.init();
+TwitterApi.init();
