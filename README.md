@@ -13,7 +13,7 @@ A simple API for interacting with the Twitter API.  The goal is to teach the fun
 
 Call the desired method using the query parameter **op**, as in:
 
-	?op=search&username=screen_name&count=10
+	?op=search_timeline&username=screen_name&count=10
 
 All other query arguments will be passed through to the Twitter API.
 
