@@ -37,5 +37,7 @@ function user_search($options) {
 $operation = $_REQUEST['op'];
 if (function_exists($operation)) {
 	$operation($_REQUEST);
+} else {
+	http_response_code(400);
 }
 ?>
