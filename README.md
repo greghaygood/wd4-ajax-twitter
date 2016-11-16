@@ -13,24 +13,35 @@ A simple API for interacting with the Twitter API.  The goal is to teach the fun
 
 Call the desired method using the query parameter **op**, as in:
 
-	?op=search_timeline&username=screen_name&count=10
+	?op=user_timeline&username=screen_name&count=10
 
 All other query arguments will be passed through to the Twitter API.
 
-## Methods
+## Parameters (op=?)
 
 #### search($options)
 
+API: <https://dev.twitter.com/rest/reference/get/search/tweets>
+
 Expected $options arguments:
 
-* q
+* q *(required)*
 * count
 * result_type
 
 #### user_timeline($options)
 
+API: <https://dev.twitter.com/rest/reference/get/statuses/user_timeline>
+
 Expected $options arguments:
 
-* screen_name
+* screen_name *(required)*
 
+#### user_search($options)
+
+API: <https://dev.twitter.com/rest/reference/get/users/search>
+
+Expected $options arguments:
+
+* q *(required)*
 
